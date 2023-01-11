@@ -136,7 +136,7 @@ func TestPubkeyAminoName(t *testing.T) {
 		found bool
 	}{
 		{ed25519.PubKeyEd25519{}, ed25519.PubKeyAminoName, true},
-		{secp256k1.PubKeySecp256k1{}, secp256k1.PubKeyAminoName, true},
+		{secp256k1.PubKey{}, secp256k1.PubKeyAminoName, true},
 		{multisig.PubKeyMultisigThreshold{}, multisig.PubKeyMultisigThresholdAminoRoute, true},
 	}
 	for i, tc := range tests {
